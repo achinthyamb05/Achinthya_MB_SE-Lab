@@ -1,3 +1,6 @@
+##Forked repo link
+https://github.com/achinthyamb05/19_battleship
+
 # Scenario 19 — Battleship vs AI
 
 A terminal Battleship game with separate board and AI modules.

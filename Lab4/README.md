@@ -2,6 +2,8 @@ Forked repo link
 https://github.com/achinthyamb05/19_battleship
 
 Lab 4 Tasks Completed
+
+
 Task 1 — Consistent Coordinate Handling
 
 Fixed the coordinate representation between the player, board, and AI.
@@ -10,6 +12,8 @@ Internal coordinates use zero-based (row, column) tuples.
 User-facing coordinates are displayed using one-based numbering.
 AI coordinates are now handled consistently throughout the game.
 Ship hit detection works correctly with the same coordinate representation.
+
+
 Task 2 — Multiple Ships and Fleet Tracking
 
 Added support for multiple ships for both the player and the enemy.
@@ -22,6 +26,8 @@ Repeated-shot prevention
 Ship sinking detection
 Complete fleet sinking detection
 Game completion when all enemy ships are sunk
+
+
 Task 3 — Improved AI Targeting
 
 Improved the AI so that after successfully hitting a ship, it prioritizes nearby untried cells.
@@ -32,6 +38,8 @@ Tracks previously attempted coordinates
 Avoids firing at the same coordinate twice
 Prioritizes adjacent cells after a hit
 Handles the situation where no untried cells remain
+
+
 Task 4 — Shot and Sinking Feedback
 
 Added clear feedback for each actual shot.

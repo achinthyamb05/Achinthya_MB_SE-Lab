@@ -1,96 +1,90 @@
 Forked repo link
 https://github.com/achinthyamb05/19_battleship
 
-# Scenario 19 — Battleship vs AI
+Lab 4 Tasks Completed
+Task 1 — Consistent Coordinate Handling
 
-A terminal Battleship game with separate board and AI modules.
+Fixed the coordinate representation between the player, board, and AI.
 
-## Provided files
+Internal coordinates use zero-based (row, column) tuples.
+User-facing coordinates are displayed using one-based numbering.
+AI coordinates are now handled consistently throughout the game.
+Ship hit detection works correctly with the same coordinate representation.
+Task 2 — Multiple Ships and Fleet Tracking
 
-- `main.py` — entry point.
-- `game.py` — turn flow and setup.
-- `board.py` — ship and shot state.
-- `ai.py` — computer targeting.
-- `requirements.txt` — dependency declaration.
+Added support for multiple ships for both the player and the enemy.
 
-## Setup
+The game now supports:
 
-```bash
-python main.py
-```
+Multiple ships
+Individual ship damage tracking
+Repeated-shot prevention
+Ship sinking detection
+Complete fleet sinking detection
+Game completion when all enemy ships are sunk
+Task 3 — Improved AI Targeting
 
-## Before changing the code
+Improved the AI so that after successfully hitting a ship, it prioritizes nearby untried cells.
 
-Inspect how coordinates are represented in every module. Fire at known ship cells and
-known empty cells. Then trace an AI shot from selection to hit detection.
+The AI:
 
-## Task 1 — Consistent coordinate handling
+Tracks previously attempted coordinates
+Avoids firing at the same coordinate twice
+Prioritizes adjacent cells after a hit
+Handles the situation where no untried cells remain
+Task 4 — Shot and Sinking Feedback
 
-Make coordinate representation consistent across input, ship placement, player shots,
-and AI shots so occupied cells are recognised correctly.
+Added clear feedback for each actual shot.
 
-**Done when:** every real ship coordinate is treated as a hit and every known empty
-coordinate is treated as a miss.
+The game displays:
 
-## Task 2 — Complete fleet and win logic
+HIT! when a shot hits a ship
+MISS! when a shot misses
+You sank a ship. when an individual enemy ship is completely destroyed
+You sank the fleet. when all enemy ships are destroyed
+AI scored a hit when the AI hits a player ship
+AI missed when the AI misses
+AI sank your ship. when the AI completely destroys a player ship
+Testing
 
-Support multiple ships, track individual ship damage, identify sunk ships, prevent
-repeated shots, and end the game when the fleet is sunk.
+The following functionality was tested:
 
-## Task 3 — Improve the AI
+Player hits
+Player misses
+Repeated player shots
+Invalid coordinates
+Coordinates outside the board
+Sinking an individual ship
+Sinking the complete enemy fleet
+AI coordinate handling
+AI repeated-shot prevention
+AI adjacent targeting after a hit
+AI hit and miss feedback
+Quitting the game
+Dependencies
 
-After a hit, make the AI preferentially consider nearby untried cells. It must never
-shoot the same coordinate twice and must handle a board with no remaining choices.
+This project uses only Python standard-library functionality.
 
-## Task 4 — Shot-level feedback
+No third-party packages are required.
 
-Ensure hit/miss/sunk feedback occurs exactly once for an actual shot. Internal AI
-candidate selection must not produce false hit/miss messages.
+LLM / Vibe Coding
 
-## Required testing
+An LLM was used during development to:
 
-Test hits, misses, repeated shots, sinking one ship, sinking all ships, AI repeated-shot
-prevention, adjacent targeting after a hit, invalid coordinates, and quitting.
+Understand the existing code and identify defects
+Fix coordinate representation inconsistencies
+Implement multiple-ship functionality
+Improve AI targeting
+Add shot and sinking feedback
+Suggest and verify tests
 
+All generated changes were reviewed, tested, and verified before being committed.
 
-## LLM usage
+Git Commit History
 
-You may use an LLM during the lab. The goal is to use it as a coding assistant while
-retaining responsibility for understanding and testing the result.
+The implementation was committed incrementally:
 
-- Inspect the existing code before asking for changes.
-- Ask for explanations when you do not understand a proposed change.
-- Test generated code against the stated behaviour and edge cases.
-- Keep your complete LLM chat history for submission.
-- Do not replace the whole project with an unrelated implementation.
-- Keep all state in memory; do not add CSV, JSON, SQLite, or other persistence.
-
-## Submission checklist
-
-- [ ] Task 1 completed and the original defect was reproduced and fixed.
-- [ ] Tasks 2–4 completed and tested.
-- [ ] Boundary and invalid-input cases tested.
-- [ ] No unnecessary external dependencies added.
-- [ ] No persistent storage added.
-- [ ] Code remains understandable and modular.
-- [ ] Complete LLM chat-history link included.
-
-## Folder structure
-
-```text
-scenario-07-battleship/
-├── README.md
-├── requirements.txt
-├── main.py
-├── game.py
-├── board.py
-└── ai.py
-```
-
-## Submission Checklist
-
-Submission is only the following three things:
-
-- [ ] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
-- [ ] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
-- [ ] The Chat/LLM used page link, with the complete chat history
+Fix AI coordinate handling
+Add multiple ship and fleet tracking
+Improve AI targeting
+Add shot and sunk feedbackpage link, with the complete chat history

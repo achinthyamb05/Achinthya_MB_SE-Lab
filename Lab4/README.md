@@ -1,4 +1,4 @@
-##Forked repo link
+Forked repo link
 https://github.com/achinthyamb05/19_battleship
 
 # Scenario 19 — Battleship vs AI

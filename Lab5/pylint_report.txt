@@ -1,0 +1,7 @@
+************* Module scholarship_disbursement
+scholarship_disbursement.py:91:0: C0304: Final newline missing (missing-final-newline)
+scholarship_disbursement.py:22:0: C0103: Constant name "disbursed_total" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 9.50/10 (previous run: 5.00/10, +4.50)
+

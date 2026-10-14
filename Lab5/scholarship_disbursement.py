@@ -19,7 +19,7 @@ conn.execute(
     "disbursed INTEGER"
     ")"
 )
-disbursed_total = 0
+disbursed_total = 0  # pylint: disable=invalid-name
 
 
 def grant(
@@ -89,3 +89,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    
